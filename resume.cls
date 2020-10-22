@@ -105,4 +105,3 @@ Last Updated on
 \newcommand{\cvtag}[1]{%
   \tikz[baseline]\node[anchor=base,draw=primary!60,rounded corners,inner xsep=1ex,inner ysep =1ex,text height=1.5ex,text depth=0ex]{#1};
 }
-
