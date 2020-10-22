@@ -1,183 +1,178 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% LaTeX Resume Template
-% https://github.com/rohit-gohri/resume-template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Resume Template - Class File
 %
-% NOTE:
-% This template requires the resume.cls file to be in the same directory as the .tex file.
-% The resume.cls file provides the resume style used for structuring the document.
-% 
-% Version: v1.0.0 (2020/05/04)
-% By Rohit Gohri (https://rohit.page)
-% 
-% 
-% Based On:
-% Medium Length Professional CV
-% 
-% Downloaded from:
-% http://www.LaTeXTemplates.com
-% 
-% Trey Hunner (http://www.treyhunner.com/)
-% Version 2.0 (8/5/13)
+% This class file defines the structure and design of the template. For content see the `resume.tex` file.
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Version: v1.0.0 (2020/10/22)
+% By Saurabh Miglani (https://rohit.page)
+% Based on:
+% Deedy - One Page Two Column Resume
+% Version 1.1 (30/4/2014)
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\documentclass[]{resume}
 
-\documentclass[UKenglish]{resume} % Use the custom resume.cls style
-
-%----------------------------------------------------------------------------------------
-%	VARIABLES
-%----------------------------------------------------------------------------------------
-
-\name{ John Doe }
-\setCity{ New Delhi, India }
-\setEmail{ email@example.com }
-\setPhoneNum{ +91-9999999999 }
-\setLinkedIn{ john-doe }
-\setGithub{ john-doe }
-
-\setWebsite{ example.com }
-\setPdfKeywords { resume, cv, hiring, template }
-\setPdfSubject { John Doe's Resume }
-
-% Override any variables/commands through a private file
-\InputIfFileExists{\jobname.tmp}{}{}
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{ Education }
-
-    \rSubsectionHeading
-        {Abc Def Institute of Pqr, \nem University of Xyz}
-        { \fmtdate{8}{2013} - \fmtdate{6}{2017} }
-        {\normalfont B.X. in Abcdef, CGPA: 7.89}
-        {Xyz, XX}
-    % TODO: Add courses example
-    % \\ {\bfseries Courses}: Abc12345, Def67890 \smallskip
-
-    \rSubsectionHeading
-        {Pqr Academy, \nem C.D.E.F.}
-        { \fmtdate{4}{2011} - \fmtdate{4}{2013} }
-        {\normalfont ABCDEF, Percentage: 78.9\%}
-        {Xyz, XX}
-
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	SKILLS SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Skills}
-
-    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-
-        Languages \& Frameworks     & HTML, CSS, Javascript, Typescript, NodeJS \\
-        Software \& Tools           & PM2, Nginx, Linux, Windows, SSH, Git \\
-        Other                       & Microsoft Word, Microsoft PowerPoint, Adobe Photoshop  \\
-    \end{tabular}
-
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Work Experience}
-
-    \begin{rSubsection}
-        {\href{https://example.com}{Example.com}}
-        { \fmtdate{6}{2017} - \fmtdate{10}{2019} }
-        {Software Developer}
-        {Xyz, XX}
-
-        \item Setup and made dashboards to monitor and visualize various metrics, and set alerts
-        \item Created REST APIs in backend using Express and MongoDB
-        \item Added schema validation using OpenAPI Spec
-        \item Added automated API tests using MochaJS
-
-    \end{rSubsection}
-
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%    Projects
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Projects}
-
-    \begin{rSubsection}
-        {\href{https://example.com/project}{Project Website}, {\nem Company}}
-        { \fmtdate{1}{2016} - \fmtdate{3}{2016} }
-        {}{}
-        \item Led a team to design and develop the website using \textbf{NodeJS} and MySQL
-        \item Created user management feature, including full auth flow
-        \item Deployed site on AWS, using EC2 and RDS
-    \end{rSubsection}
-
-    % NOTE: Wrapping in \draft{ } hides the content in the final PDF
-    \draft{
-        \begin{rSubsection}
-            {\href{https://example.com/project}{Draft Project}, {\nem Invisible}}
-            { \fmtdate{1}{2016} - \fmtdate{3}{2016} }
-            {}{}
-
-            \item \href{https://github.com/rohit-gohri/resume-template}{\textbf{Resume Template}}: Built in Latex with automated builds using CI/CD
-        \end{rSubsection}
-    }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\end{rSection}
+\namesection{Saurabh}{Miglani}{ 
+\href{mailto:saurabhmiglani95@gmail.com}{saurabhmiglani95@gmail.com} | +91-9871492577
+}
 
-%----------------------------------------------------------------------------------------
-%	OTHER SECTIONS
-%----------------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Non bullet points
-\begin{rSection}{Activities and Achievements} \itemsep -2pt
-    \item Most Innovative Idea, Project Website Competition, 2013
-    \item Awarded 1\textsuperscript{st} Prize, Design Competition, 2014
-    \item Hosted a workshop on AWS attended by 100+ students, 2015
-\end{rSection}
+\begin{minipage}[t]{0.33\textwidth} 
 
-%----------------------------------------------------------------------------------------
 
-\begin{rSection}{Extra-Curricular} \itemsep -3pt
-    \begin{rSubsection}
-        {\href{https://example.com/society/}{Society - College}}
-        { \fmtdate{2}{2014} - \fmtdate{6}{2017} }
-        {}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-        \item Redid the website using Wordpress and created a custom theme
-        \item Increased the site's traffic by 2x
+\section{Education} 
 
-    \end{rSubsection}
+\subsection{Netaji Subhas Institute}
+\subsection{of Technology}
+\descript{B.E in Electronics and Communication Engineering }
+\location{Aug. 2013 - Jun. 2017 | Delhi, India}
+\sectionsep
 
-    %------------------------------------------------
 
-    \begin{rSubsection}
-        {B99, {\normalfont \em Member}}
-        { \fmtdate{1}{2014} - \fmtdate{6}{2015} }
-        {}{}
-        \item Winner, Halloween Competition 2014
-        \item Hosted the 2015 Halloween Competition with 100+ attendees
-    \end{rSubsection}
+\subsection{Delhi Public School,}
+\subsection{R.K. Puram}
+\descript{AISSCE}
+\location{Apr. 2011 - Apr. 2013 | Delhi, India}
+\sectionsep
 
-\end{rSection}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Skills}
+\subsection{Languages and}
+\subsection{Frameworks}
+\cvtag{Java}
+\cvtag{Spring Framework}
+\cvtag{Hibernate}
+\cvtag{Python}
+\cvtag{SQL}
+\cvtag{Bash}
+\cvtag{C++}
 
-%----------------------------------------------------------------------------------------
+\sectionsep
 
-% Tabular data
-\begin{rSection}{Relevant Courses}
-    \itab{\textbf{Core Courses}} \tab{}  \tab{\textbf{Other Courses}}
-    \\ \itab{ABC} \tab{}  \tab{System Organisation}
-    \\ \itab{PQR} \tab{}  \tab{IOME}
-    \\ \itab{DBMS} \tab{}  \tab{Some Subject}
-\end{rSection}
+\subsection{Software, Tools}
+\subsection{and Cloud}
+\cvtag{Elasticsearch} 
+\cvtag{Logstash}
+\cvtag{Docker}
+\cvtag{Mulesoft}
+\cvtag{RabbitMQ}
+\cvtag{jBPM} 
+\cvtag{PostgresSQL}
+\cvtag{Git}
+\cvtag{SSH}
+\cvtag{AWS S3}
+\cvtag{AWS SES}
+\cvtag{AWS SNS}
+\sectionsep
 
-\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Links} 
+Github:  \href{https://github.com/codery2k}{\custombold{codery2k}} \\
+LinkedIn:  \href{https://www.linkedin.com/in/saurabh-miglani/}{\custombold{saurabh-miglani}} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXTRA-CURRICULARS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Extra-Curriculars} 
+Won \custombold{Gold} Medal in the football tournament at SANGRAM ‘16, IIT Roorkee \\
+Won \custombold{Silver} Medal in the football tournament at TWARAN ‘16, ABV- IIITM Gwalior
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Avizva Solutions}
+\descript{ | Associate Technology L2}
+\location{January-2018 - June-2019 | Gurugram, India}
+\begin{itemize}
+    \item Designed and implemented multi-level role-based authorisation framework to handle HIPAA compliance
+    \item Led a team to develop \custombold{Elasticsearch} mappings, Groovy-based queries and \custombold{Java} API to search core insurance data
+    \item Created \custombold{Logstash} pipelines with several input and filter plugins to ingest high volume data from multiple databases
+    \item Managed configurations, database scripts, search indices and ETL pipelines for \custombold{multiple production deliveries} 
+    \item Identified performance bottlenecks using \custombold{jMeter} and Postman. \custombold{Decreased average load time} across the website by \custombold{\textbf{65\%}} after refactoring core display logic and several database queries
+    \item Worked on multiple features of Online Enrollment application, a multi-step form constructed using json configurations 
+    \item Integrated \custombold{RabbitMQ} to forward approved enrollments to a \custombold{MuleSoft} outbound flow, for third-party integrations
+    \item Designed MuleSoft flows to automate testing of outbound data flows. This streamlined modifications in existing flows and rapid development of new ones
+\end{itemize}
+\sectionsep
+
+
+
+\runsubsection{Avizva Solutions}
+\descript{ | Associate Trainee}
+\location{July-2017 - December-2017 | Gurugram, India}
+\begin{itemize}
+    \item Implemented notification engine using \custombold{Apache Freemarker, AWS SES, AWS SNS}
+    \item Built decision based workflows for various submission processes using \custombold{jBPM}
+\end{itemize}
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+
+\descript{\custombold{Anant-Ehsaas Foundation}
+\href{http://anantehsaas.org/}{Website} \href{https://github.com/anant-ehsaas/anant-ehsaas.github.io}{Source} }
+Single-page application using GatsbyJS and HTML5 UP 
+\\ Deployed on Github Pages and configured to a custom domain
+
+\descript{\custombold{playlist-youtube} \href{https://github.com/codery2k/playlist-youtube}{Source} }
+Python script to find Youtube Music links for music files on disk
+\descript{\custombold{file-meta-data} \href{https://github.com/codery2k/file-meta-data}{Source} }
+Python script to read metadata from all files in a directory and save it to a csv \\
+\descript{\custombold{playlists-sync} \href{https://github.com/codery2k/playlists-sync}{Source} }
+Python script to convert Android playlist file to iTunes playlist file
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
