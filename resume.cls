@@ -50,9 +50,9 @@
 
 % Set main fonts
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[SizeFeatures={Size=13}, Color=primary, Path = fonts/lato/]{Lato-Lig}
+\setmainfont[SizeFeatures={Size=12}, Color=primary, Path = fonts/lato/]{Lato-Lig}
 \setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = fonts/raleway/]{Raleway-ExtraLight}
-\newcommand{\custombold}[1]{\color{subheadings}\fontspec[SizeFeatures={Size=13},Path = fonts/lato/]{Lato-Reg}\selectfont #1 \normalfont}
+\newcommand{\custombold}[1]{\color{subheadings}\fontspec[SizeFeatures={Size=12},Path = fonts/lato/]{Lato-Reg}\selectfont #1 \normalfont}
 
 
 % Date command
