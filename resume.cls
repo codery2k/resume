@@ -4,7 +4,7 @@
 % This class file defines the structure and design of the template. For content see the `resume.tex` file.
 %
 % Version: v1.0.0 (2020/10/22)
-% By Saurabh Miglani (https://rohit.page)
+% By Saurabh Miglani 
 % Based on:
 % Deedy - One Page Two Column Resume
 % Version 1.1 (30/4/2014)
